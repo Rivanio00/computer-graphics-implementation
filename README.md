@@ -13,20 +13,20 @@ testa interseção com a esfera.
 
 ### Estrutura
 
-\`\`\`
-task01/  
-├── headers/  
-│   ├── Color.h  
-│   ├── Vector3.h  
-│   └── stb_image_write.h  
-├── src/  
-│   ├── main.cpp  
-│   └── models/  
-│       ├── Color.cpp  
-│       └── Vector3.cpp 
-└── output/          # gerado automaticamente ao rodar (não versionado)  
-    └── esfera_unica.jpg 
-\`\`\`
+- `task01/`
+  - `headers/`
+    - Color.h
+    - Vector3.h
+    - stb_image_write.h
+  - `src/`
+    - main.cpp
+    - `models/`
+      - Color.cpp
+      - Vector3.cpp
+  - `output/`
+    - esfera_unica.jpg
+
+> `output/` é gerado automaticamente ao executar o projeto e não é versionado.
 
 
 ### Compilar e Rodar
