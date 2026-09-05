@@ -4,7 +4,7 @@ Repositório com as tarefas da disciplina de Computação Gráfica. Cada
 tarefa fica em sua própria pasta (`task01/`, `task02/`, ...),
 autocontida, com seu próprio código-fonte e instruções.
 
-## Tarefa 01 — Esfera única via ray casting
+## Task 01 — Esfera única via ray casting
 
 Renderiza uma única esfera vermelha sobre fundo cinza, usando um modelo
 simplificado de "janela do pintor": para cada pixel do canvas, um raio
@@ -14,18 +14,18 @@ testa interseção com a esfera.
 ### Estrutura
 
 \`\`\`
-task01/
-├── headers/
-│   ├── Color.h
-│   ├── Vector3.h
-│   └── stb_image_write.h
-├── src/
-│   ├── main.cpp
-│   └── models/
-│       ├── Color.cpp
-│       └── Vector3.cpp
-└── output/              # gerado automaticamente ao rodar (não versionado)
-    └── esfera_unica.jpg
+task01/  
+├── headers/  
+│   ├── Color.h  
+│   ├── Vector3.h  
+│   └── stb_image_write.h  
+├── src/  
+│   ├── main.cpp  
+│   └── models/  
+│       ├── Color.cpp  
+│       └── Vector3.cpp 
+└── output/          # gerado automaticamente ao rodar (não versionado)  
+    └── esfera_unica.jpg 
 \`\`\`
 
 
