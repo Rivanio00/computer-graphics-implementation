@@ -13,32 +13,42 @@ testa interseção com a esfera.
 
 ### Estrutura
 
-- `task01/`
+- `computer-graphics-implementation/`
   - `headers/`
     - Color.h
     - Vector3.h
     - stb_image_write.h
-  - `src/`
-    - main.cpp
-    - `models/`
+  - `models/`
       - Color.cpp
       - Vector3.cpp
   - `output/`
-    - esfera_unica.jpg
+    - taskXX.jpg
+  - `taskXX/`
+    - main.cpp
 
 > `output/` é gerado automaticamente ao executar o projeto e não é versionado.
 
 
 ### Compilar e Rodar
 
-A partir da pasta \`task01/\`:
+A partir da pasta raiz do repo:
 
-\`\`\`bash
-g++ -std=c++17 -O2 -Iheaders -o task01 src/main.cpp src/models/Color.cpp src/models/Vector3.cpp
-./task01
-\`\`\`
+1. Para rodar uma única task   
+```bash
+g++ -std=c++17 -O2 -Iheaders -o task01/task01 task01/main.cpp models/Color.cpp models/Vector3.cpp && ./task01/task01
+```
 
-A imagem final é salva em \`task01/output/esfera_unica.jpg\` (a pasta
+2. Para rodar todas é necessário permitir a execução do .sh
+```bash
+chmod +x run_all.sh
+``` 
+
+Após a permissão basta rodar
+```bash
+./run_all.sh
+```
+
+A imagem final é salva em \`/output/taskXX.jpg\` (a pasta
 \`output/\` é criada automaticamente na primeira execução).
 
 ### Créditos

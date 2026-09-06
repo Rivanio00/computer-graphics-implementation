@@ -82,7 +82,7 @@ int main()
     // salva em uma pasta separada da fonte, criando-a se necessario
     const std::filesystem::path pastaSaida = "output";
     std::filesystem::create_directories(pastaSaida);
-    const std::filesystem::path caminhoImagem = pastaSaida / "esfera_unica.jpg";
+    const std::filesystem::path caminhoImagem = pastaSaida / "task01.jpg";
 
 
     // qualidade JPEG de 0 a 100; 90 e um bom equilibrio qualidade/tamanho
