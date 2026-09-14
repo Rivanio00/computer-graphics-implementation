@@ -38,7 +38,7 @@ A partir da pasta raiz do repo:
 g++ -std=c++17 -O2 -Iheaders -o task01/task01 task01/main.cpp models/Color.cpp models/Vector3.cpp && ./task01/task01
 ```
 
-2. Para rodar todas é necessário permitir a execução do .sh
+2. Para compilar e rodar todas é necessário permitir a execução do .sh
 ```bash
 chmod +x run_all.sh
 ``` 

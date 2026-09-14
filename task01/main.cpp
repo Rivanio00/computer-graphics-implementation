@@ -91,6 +91,10 @@ int main()
  
     std::cout << "Imagem salva em " << caminhoImagem.string()
             << " (" << nCol << "x" << nLin << ")\n";
+
+    
+    std::string comandoAbrir = "xdg-open \"" + caminhoImagem.string() + "\" &";
+    std::system(comandoAbrir.c_str());
  
     return 0;
 }
