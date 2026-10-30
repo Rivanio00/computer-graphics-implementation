@@ -129,7 +129,7 @@ int main()
             << " (" << nCol << "x" << nLin << ")\n";
 
     std::string comandoAbrir = "xdg-open \"" + caminhoImagem.string() + "\" &";
-    std::system(comandoAbrir.c_str());
+    if (std::system(comandoAbrir.c_str())) {}
  
     return 0;
 }

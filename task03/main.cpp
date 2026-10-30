@@ -29,7 +29,6 @@ void escreverPixel(std::vector<std::uint8_t>& buffer, int indicePixel, const Col
 int main()
 {
     // ---------------- Janela e olho ----------------
-    // Unidades em centimetros, seguindo o enunciado da Task03.
     const float   wJanela = 60.f;
     const float   hJanela = 60.f;
     const float   dJanela = 30.f;
@@ -95,7 +94,7 @@ int main()
     std::cout << "Imagem salva em " << caminhoImagem.string() << " (" << nCol << "x" << nLin << ")\n";
 
     std::string comandoAbrir = "xdg-open \"" + caminhoImagem.string() + "\" &";
-    (void)std::system(comandoAbrir.c_str());
+    if (std::system(comandoAbrir.c_str())) {}
 
     return 0;
 }
