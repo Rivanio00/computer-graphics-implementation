@@ -5,7 +5,7 @@ for pasta in task*/; do
     task="${pasta%/}"   # remove a barra final (task01/ -> task01)
 
     echo "==> Compilando $task"
-    g++ -std=c++17 -O2 -Iheaders -o "$task/$task" "$task/main.cpp" models/Color.cpp models/Vector3.cpp models/Sphere.cpp models/Plane.cpp models/Renderer.cpp models/Cylinder.cpp models/Cone.cpp models/Cube.cpp
+    g++ -std=c++17 -O2 -Iheaders -o "$task/$task" "$task/main.cpp" models/Color.cpp models/Vector3.cpp models/Sphere.cpp models/Plane.cpp models/Renderer.cpp models/Cylinder.cpp models/Cone.cpp models/Cube.cpp models/Matrix4.cpp
 
     echo "==> Rodando $task"
     "./$task/$task"

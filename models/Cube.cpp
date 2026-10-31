@@ -54,3 +54,30 @@ bool Cube::intersect(const Raio& raio, float tMin, float tMax, HitRecord& hit) c
     hit.material = &material;
     return true;
 }
+
+void Cube::applyTransform(const Matrix4& mat) {
+    // Obter os 8 vértices originais da caixa
+    Vector3 v[8];
+    v[0] = mat.transformPoint(Vector3(min_bounds.x, min_bounds.y, min_bounds.z));
+    v[1] = mat.transformPoint(Vector3(max_bounds.x, min_bounds.y, min_bounds.z));
+    v[2] = mat.transformPoint(Vector3(min_bounds.x, max_bounds.y, min_bounds.z));
+    v[3] = mat.transformPoint(Vector3(max_bounds.x, max_bounds.y, min_bounds.z));
+    v[4] = mat.transformPoint(Vector3(min_bounds.x, min_bounds.y, max_bounds.z));
+    v[5] = mat.transformPoint(Vector3(max_bounds.x, min_bounds.y, max_bounds.z));
+    v[6] = mat.transformPoint(Vector3(min_bounds.x, max_bounds.y, max_bounds.z));
+    v[7] = mat.transformPoint(Vector3(max_bounds.x, max_bounds.y, max_bounds.z));
+
+    // Recalcular a nova caixa delimitadora AABB no espaço da câmara
+    min_bounds = v[0];
+    max_bounds = v[0];
+    
+    for (int i = 1; i < 8; ++i) {
+        min_bounds.x = std::min(min_bounds.x, v[i].x);
+        min_bounds.y = std::min(min_bounds.y, v[i].y);
+        min_bounds.z = std::min(min_bounds.z, v[i].z);
+
+        max_bounds.x = std::max(max_bounds.x, v[i].x);
+        max_bounds.y = std::max(max_bounds.y, v[i].y);
+        max_bounds.z = std::max(max_bounds.z, v[i].z);
+    }
+}

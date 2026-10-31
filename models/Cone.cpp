@@ -77,3 +77,8 @@ bool Cone::intersect(const Raio& raio, float tMin, float tMax, HitRecord& hit) c
     }
     return false;
 }
+
+void Cone::applyTransform(const Matrix4& mat) {
+    base_center = mat.transformPoint(base_center);
+    direction = mat.transformVector(direction).normalized();
+}

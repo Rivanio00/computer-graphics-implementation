@@ -12,4 +12,6 @@ public:
     // Construtor recebe o centro da base e o tamanho da aresta
     Cube(Vector3 centro_base, double aresta, Material m);
     bool intersect(const Raio& raio, float tMin, float tMax, HitRecord& hit) const override;
+
+    void applyTransform(const Matrix4& mat) override;
 };

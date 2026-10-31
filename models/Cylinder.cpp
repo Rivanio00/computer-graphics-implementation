@@ -77,3 +77,8 @@ bool Cylinder::intersect(const Raio& raio, float tMin, float tMax, HitRecord& hi
     }
     return false;
 }
+
+void Cylinder::applyTransform(const Matrix4& mat) {
+    base_center = mat.transformPoint(base_center);
+    direction = mat.transformVector(direction).normalized();
+}

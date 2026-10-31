@@ -21,3 +21,8 @@ bool Plane::intersect(const Raio& raio, float tMin, float tMax, HitRecord& hit) 
 
     return true;
 }
+
+void Plane::applyTransform(const Matrix4& mat) {
+    ponto_ = mat.transformPoint(ponto_);
+    normal_ = mat.transformVector(normal_).normalized();
+}

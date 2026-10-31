@@ -31,3 +31,7 @@ bool Sphere::intersect(const Raio& raio, float tMin, float tMax, HitRecord& hit)
 
     return true;
 }
+
+void Sphere::applyTransform(const Matrix4& mat) {
+    centro_ = mat.transformPoint(centro_);
+}

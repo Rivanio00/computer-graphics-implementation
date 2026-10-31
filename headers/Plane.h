@@ -13,6 +13,8 @@ public:
 
     bool intersect(const Raio& raio, float tMin, float tMax, HitRecord& hit) const override;
 
+    void applyTransform(const Matrix4& mat) override;
+
 private:
     Vector3  ponto_;   // um ponto qualquer conhecido do plano (P_pi)
     Vector3  normal_;  // normal unitaria do plano

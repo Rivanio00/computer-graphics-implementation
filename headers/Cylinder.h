@@ -13,4 +13,6 @@ public:
 
     Cylinder(Vector3 b, Vector3 d, double r, double h, Material m);
     bool intersect(const Raio& raio, float tMin, float tMax, HitRecord& hit) const override;
+
+    void applyTransform(const Matrix4& mat) override;
 };
